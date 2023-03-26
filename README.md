@@ -1,18 +1,3 @@
-# lfs-scripts :penguin:
-Instructions and scripts to build Linux From Scratch (LFS), version 11.2, as simply as possible (I know, not that simple, but anyway).
-
-![Output of uname -a](https://github.com/luisgbm/lfs-scripts/blob/master/img/uname.png?raw=true)
-
-![vim :smile](https://github.com/luisgbm/lfs-scripts/blob/master/img/vim-smile.png?raw=true)
-
-# Foreword
-
-First, this guide does not replace reading the whole LFS book. I highly recommend that you read it at least once. Only then you should use the automated scripts provided here.
-
-This build will be accomplished inside a virtual machine. I'll be using Oracle VirtualBox, but you can use any tool of your personal preference. I'm running an Arch Linux VM, feel free to use your GNU/Linux distribution of choice. Just be sure to install the development tools available (base-devel package on Arch).
-
-My VM has two virtual hard disks: one for the host (Arch Linux itself) and another for building LFS. You could also use a single hard disk with two partitions, that's also up to personal taste. I've decided to use two separate hard disks so I can completely isolate LFS from the host after the build. At the end, you'll be able to create a separate VM and boot from it directly.
-
 The packages needed to build LFS were downloaded from [here](http://ftp.osuosl.org/pub/lfs/lfs-packages/lfs-packages-11.2.tar) (474 MB), other mirrors are available [here](http://linuxfromscratch.org/lfs/download.html) (look for the "LFS HTTP/FTP Sites" section at the bottom, the file you need is lfs-packages-11.0.tar).
 
 # Build instructions
@@ -279,7 +264,3 @@ Run the final script to configure the rest of the system:
 ```
 sh /lfs-final.sh | tee /lfs-final.log
 ```
-
-# The end
-
-You can now create a new VM using the virtual hard disk with the LFS build. It will be bootable and fully functional. Enjoy!
